@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Clientes</title>
-    <script type="module" src="./Controlador.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="./controlador.js"></script>
 </head>
 <body>
-<button id="crearCliente">Crear Cliente</button>  
+    <div class="container">
+        <h1>Registro de Clientes</h1>
+        <p class="subtitle">Ingresa los datos del nuevo cliente</p>
+        
+        <div class="divider"></div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ej: Samuel" autocomplete="off">
+            <p class="hint">Mínimo 4 caracteres</p>
+        </div>
+        
+        <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Ej: Pérez" autocomplete="off">
+            <p class="hint">Mínimo 4 caracteres</p>
+        </div>
+        
+        <div class="form-group">
+            <label for="rol">Rol</label>
+            <input type="text" id="rol" placeholder="Ej: Administrador" autocomplete="off">
+            <p class="hint">Mínimo 4 caracteres</p>
+        </div>
+
+        <button id="boton_registrar" class="btn-registrar">Registrar Cliente</button>
+    </div>
 </body>
 </html>
+
+<!-- metodos para manipular el localStorage
+setItem(key, value)
+getItem(key) -->
+
+
+<!-- que estructura de datos que se almacena en el localStorage
+
+respuesta: JSON -->
