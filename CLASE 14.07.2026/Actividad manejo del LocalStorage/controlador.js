@@ -1,63 +1,45 @@
+import Api_modelo from './Api_modelo.js';
+import Cliente_modelo from './Cliente_modelo.js';
+
 //me traido el boton del html
 const boton_registrar = document.getElementById('boton_registrar');
 boton_registrar.addEventListener('click', ()=>{
     const nombre = document.getElementById('nombre').value.trim();
     // el trim lo usamos para eliminar espacios en blanco
+    const apellido = document.getElementById('apellido').value.trim();
+    const rol = document.getElementById('rol').value.trim();
 
-    if(nombre.length <= 3){
-        alert("El nombre debe tener mas de 3 caracteres");
+    //Validación: Si algún campo está vacío
+    if (nombre === '' || apellido === '' || rol === '') {
+        alert("Todos los campos son obligatorios");
         return;
     }
 
-    localStorage.setItem('nombre', nombre);
-    alert("El nombre ha sido registrado");
-});
+    try {
+        //Crear una instancia de Cliente_modelo (VALIDA LONGITUD)
+        const nuevoCliente = new Cliente_modelo(nombre, apellido, rol);
 
-const boton_registrarApellido = document.getElementById('boton_registrarApellido');
-boton_registrarApellido.addEventListener('click', function(){
+    // Guardar usando la clase Api_modelo
+    const api = new Api_modelo();
+    const resultado = api.guardar_cliente('lista_clientes', nuevoCliente);
+    
+    //  VERIFICAR si el Modelo guardó exitosamente
+    if (resultado === false) {
+        // El Modelo ya mostró el alert de duplicado
+        // Solo terminamos la ejecución sin mostrar mensajes de éxito
+        return;
+    }
+
+    // Si llegamos aquí, significa que se guardó correctamente
+    alert("El cliente ha sido registrado");
+    alert('Bienvenido ' + nombre + ' ' + apellido);
+
     console.log("Click detectado");
-    const apellido = document.querySelector('#apellido').value;
+    console.log("Nombre:", nombre);
+    console.log("Apellido:", apellido);
+    console.log("Rol:", rol);
+
+    } catch (error) {
+        alert(error.message);
+    }
 });
-
-const boton_registrarRol = document.getElementById('boton_registrarRol');
-boton_registrarRol.addEventListener('click', function(){
-    console.log("Click detectado");
-    const rol = document.querySelector('#rol').value;
-});
-
-
-
-// // FUNCION TRADICIONAL
-// function hacer_bucle(){
-//     for (let i = 0; i < 1000; i++) {
-//         console.log(i);
-//     }}
-
-// async function hacer_saludo(){
-//     const info =await hacer_bucle();
-//     console.log("Hola, este es un saludo");
-// }
-
-// // Este es un diccionario que contiene la información del cliente que se va a crear.
-// const info_cliente = {
-//     "nombre" : "Samuel",
-//     "apellido" : "Perez",
-//     "roll" : "Administrador"        
-// }
-
-// const boton_enviar = document.getElementById('crearCliente');
-// console.log(boton_enviar);
-
-// boton_enviar.addEventListener('click', ()=>{
-//     let info_storage = localStorage.getItem('clientes');
-//     console.log(info_storage)
-
-//     localStorage.setItem('info_cliente', JSON.stringify(info_cliente));
-
-//     localStorage.setItem('info_token', JSON.stringify([]));
-//     localStorage.setItem('info_api', JSON.stringify([]));
-//     localStorage.setItem('info_producto', JSON.stringify([]));
-
-//     hacer_saludo();
-// });
-
