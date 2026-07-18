@@ -1,7 +1,0 @@
-1.Crear Clases
-2.Crear constructore
-3.Crear atributos
-4.Crear metodos
-5.Crear el objeto
-6.Llamar a los metodos
-7.Retornar
