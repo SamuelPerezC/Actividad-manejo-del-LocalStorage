@@ -21,7 +21,7 @@ export default class Cliente_modelo {
         return {
             nombre: this.nombre,
             apellido: this.apellido,
-            rol: this.roll  // ⬅️ Aquí se mapea "roll" a "rol"
+            rol: this.roll  // Aquí se mapea 
         };
     }
 
