@@ -28,7 +28,7 @@ export default class Api_modelo {
         // Guardar nuevamente el arreglo actualizado
         localStorage.setItem(lista_cliente, JSON.stringify(lista));
         
-        return true; // ✅ Retorna true cuando guarda exitosamente
+        return true; // Retorna true cuando guarda exitosamente
     }
 
 
