@@ -19,7 +19,7 @@ export default class Api_modelo {
         
         if (nombreduplicado) {
             alert('El cliente "' + obj_cliente.nombre + ' ' + obj_cliente.apellido + '" ya existe');
-            return false; // ✅ Retorna false cuando hay duplicado
+            return false; // Retorna false cuando hay duplicado
         }
 
         // Agregar el nuevo cliente al arreglo
