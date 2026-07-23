@@ -1,0 +1,91 @@
+calzado-cucuta-store/
+│
+├── src/
+│   ├── assets/
+│   │   ├── imagenes/
+│   │   │   ├── productos/
+│   │   │   ├── banners/
+│   │   │   └── logos/
+│   │   └── fuentes/
+│   │
+│   ├── componentes/
+│   │   ├── comunes/
+│   │   │   ├── Cabecera/        ← Header
+│   │   │   ├── PieDePagina/     ← Footer
+│   │   │   ├── BarraNavegacion/ ← Navbar
+│   │   │   └── Cargando/        ← LoadingSpinner
+│   │   │
+│   │   ├── disenos/             ← layout
+│   │   │   ├── DisenoPrincipal/ ← MainLayout
+│   │   │   └── DisenoAutenticacion/ ← AuthLayout
+│   │   │
+│   │   ├── productos/           ← product
+│   │   │   ├── TarjetaProducto/ ← ProductCard
+│   │   │   ├── ListaProductos/  ← ProductList
+│   │   │   ├── DetalleProducto/ ← ProductDetail
+│   │   │   └── FiltrosProductos/← ProductFilters
+│   │   │
+│   │   ├── carrito/             ← cart
+│   │   │   ├── ItemCarrito/     ← CartItem
+│   │   │   ├── ResumenCarrito/  ← CartSummary
+│   │   │   └── DesplegableCarrito/ ← CartDropdown
+│   │   │
+│   │   ├── autenticacion/       ← auth
+│   │   │   ├── FormularioLogin/ ← LoginForm
+│   │   │   └── FormularioRegistro/ ← RegisterForm
+│   │   │
+│   │   └── interfaz/            ← ui
+│   │       ├── Boton/           ← Button
+│   │       ├── Entrada/         ← Input
+│   │       ├── Modal/           ← Modal
+│   │       └── Alerta/          ← Alert
+│   │
+│   ├── paginas/                 ← pages
+│   │   ├── Inicio/              ← Home
+│   │   ├── Productos/           ← Products
+│   │   ├── DetalleProducto/     ← ProductDetail
+│   │   ├── Carrito/             ← Cart
+│   │   ├── Pago/                ← Checkout
+│   │   ├── IniciarSesion/       ← Login
+│   │   ├── Registrarse/         ← Register
+│   │   ├── Perfil/              ← Profile
+│   │   └── NoEncontrado/        ← NotFound
+│   │
+│   ├── ganchos/                 ← hooks
+│   │   ├── usarCarrito/         ← useCart
+│   │   ├── usarAutenticacion/   ← useAuth
+│   │   ├── usarProductos/       ← useProducts
+│   │   └── usarAlmacenamientoLocal/ ← useLocalStorage
+│   │
+│   ├── contextos/               ← contexts
+│   │   ├── ContextoCarrito/     ← CartContext
+│   │   ├── ContextoAutenticacion/ ← AuthContext
+│   │   └── ContextoTema/        ← ThemeContext
+│   │
+│   ├── servicios/               ← services
+│   │   ├── api/
+│   │   ├── servicioAutenticacion/ ← authService
+│   │   └── servicioProductos/   ← productService
+│   │
+│   ├── utilidades/              ← utils
+│   │   ├── constantes/          ← constants
+│   │   ├── ayudantes/           ← helpers
+│   │   └── validadores/         ← validators
+│   │
+│   ├── estilos/                 ← styles
+│   │   ├── globales.css         ← globals.css
+│   │   └── variables.css
+│   │
+│   ├── rutas/                   ← routes
+│   │   └── Enrutador.jsx        ← AppRouter
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .env
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── LEEME.md                     ← README.md
